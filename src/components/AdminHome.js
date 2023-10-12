@@ -7,7 +7,7 @@ function AdminHome() {
   const [updateStudentId, setUpdateStudentId] = useState('');
   const [newStatus, setNewStatus] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(''); // not used, but maybe no need.
   
 
   useEffect(() => {
@@ -31,6 +31,7 @@ function AdminHome() {
       });
   };
 
+  // easy to follow and understand
   const handleAddStudent = () => {
     setMessage('');
     fetch('http://localhost:8080/students', {
@@ -83,6 +84,7 @@ function AdminHome() {
       });
   };
 
+  
   const handleUpdateStudentStatus = () => {
     setMessage('');
     fetch(`http://localhost:8080/students/${updateStudentId}/status`, {
@@ -112,6 +114,7 @@ function AdminHome() {
       });
   };
 
+  // well structured indents and formatting of HTML
   return (
     <div className="AdminHome">
       <div style={{ margin: 'auto' }}>
